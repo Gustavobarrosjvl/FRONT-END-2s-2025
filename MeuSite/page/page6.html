@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 5: Formulários</title>
+</head>
+<body>
+     <header><img src="../img/logo.png" width = 250 px; height = auto;></header>
+    <hr>
+    <a href="../index.html">Voltar para a página principal</a> 
+    
+    <h1>Exercício 5: Formulários</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Formulário de contrato</legend>
+
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" required><br><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha"><br><br>
+            
+            <p>Gênero:</p>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="outro" name="genero" value="outro">
+            <label for="outro">Outro</label><br><br>
+
+            <p>Interesses:</p>
+            <input type="checkbox" id="html" name="interesses" value="HTML">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="interesses" value="CSS">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="interesses" value="JavaScript">
+            <label for="js">JavaScript</label><br><br>
+
+            <label for="estado">Seu Estado:</label>
+            <select id="estado" name="estado" required>
+            <option value="" disabled selected>Selecione...</option>
+            <option value="df">Distrito Federal</option>
+            <option value="sp">São Paulo</option>
+            <option value="rj">Rio de Janeiro</option>
+            </select><br><br>
+
+            <label for="mensagem">Escreva uma mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="60"></textarea><br><br>
+
+            <input type="submit" value="Enviar Formulário">
+            <input type="reset" value="Limpar Campos">
+        </fieldset>
+    </form>
+</body>
+</html>
