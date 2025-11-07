@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farma+</title>
+  <style>
+    :root {
+      --azul-principal: #005eff;
+      --azul-banner: #002d9b;
+      --cinza-bg: #f7f9fb;
+      --cinza-card: #ffffff;
+      --texto: #1e1e1e;
+      --borda: #e4e6eb;
+      --verde: #02a64e;
+      --vermelho: #ff3737;
+      --cinza-texto: #70757a;
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--cinza-bg);
+      color: var(--texto);
+    }
+
+    header {
+      background-color: var(--azul-principal);
+      padding: 14px 40px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo span {
+      color: var(--vermelho);
+      margin-left: 4px;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 40px;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .search-bar input {
+      width: 100%;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 16px;
+      font-size: 1rem;
+      outline: none;
+      color: #333;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 0.95rem;
+    }
+
+    .menu div {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .categorias {
+      background-color: #fff;
+      padding: 10px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-bottom: 1px solid var(--borda);
+      justify-content: flex-start;
+    }
+
+    .categorias button {
+      border: none;
+      border-radius: 25px;
+      padding: 8px 16px;
+      background-color: #f1f4f8;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      color: var(--texto);
+      transition: background 0.2s;
+    }
+
+    .categorias button:hover {
+      background-color: #e5e9f2;
+    }
+
+    section {
+      margin: 35px auto;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--texto);
+    }
+
+    .lojas {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding-bottom: 5px;
+    }
+
+    .loja {
+      background-color: var(--cinza-card);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      min-width: 160px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    .loja img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+
+    .loja p {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .loja span {
+      color: var(--verde);
+      font-size: 0.9rem;
+    }
+
+    .banner {
+      background: linear-gradient(90deg, var(--azul-banner), var(--azul-principal));
+      color: #fff;
+      border-radius: var(--radius);
+      margin: 35px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px;
+      flex-wrap: wrap;
+    }
+
+    .banner img {
+      width: 380px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .banner h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 22px;
+    }
+
+    .produto {
+      background-color: var(--cinza-card);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .produto:hover {
+      transform: translateY(-3px);
+    }
+
+    .produto img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+
+    .produto h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--texto);
+      margin-bottom: 4px;
+      min-height: 36px;
+    }
+
+    .produto p {
+      color: var(--cinza-texto);
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+    }
+
+    .preco {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--texto);
+    }
+
+    footer {
+      background-color: #f1f4f8;
+      padding: 20px;
+      text-align: center;
+      color: var(--cinza-texto);
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+
+    /* ======= SCROLLBAR ======= */
+    ::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Farma<span>+</span></div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar">
+    </div>
+    <div class="menu">
+      <div>🧾 Pedidos</div>
+      <div>🛒 Carrinho R$ 0,00</div>
+      <div>👤 Perfil</div>
+    </div>
+  </header>
+
+  <!-- Categorias -->
+  <div class="categorias">
+    <button>📦 Todas as categorias</button>
+    <button>💊 Medicamentos</button>
+    <button>💪 Suplementos</button>
+    <button>🧴 Higiene Pessoal</button>
+    <button>🧒 Infantil</button>
+    <button>💅 Estética</button>
+    <button>🔥 Promoções</button>
+  </div>
+
+  <!-- Destaque -->
+  <section>
+    <h2>Destaque</h2>
+    <div class="lojas">
+      <div class="loja"><img src="https://via.placeholder.com/50" alt=""><p>Droga Center</p><span>Grátis</span></div>
+      <div class="loja"><img src="https://via.placeholder.com/50" alt=""><p>Drograria Pacheco</p><span>Grátis</span></div>
+      <div class="loja"><img src="https://via.placeholder.com/50" alt=""><p>Drograria Rosário</p><span>Grátis</span></div>
+      <div class="loja"><img src="https://via.placeholder.com/50" alt=""><p>Drogasil</p><span>Grátis</span></div>
+      <div class="loja"><img src="https://via.placeholder.com/50" alt=""><p>Pague Menos</p><span>Grátis</span></div>
+    </div>
+
+    <div class="banner">
+      <div>
+        <h3>💙 Mês do Cliente</h3>
+        <p>Aproveite descontos especiais nas melhores marcas.</p>
+      </div>
+      <img src="https://via.placeholder.com/380x120" alt="Banner">
+    </div>
+  </section>
+
+  <!-- Mais comprados -->
+ <section>
+  <h2>Mais comprados</h2>
+  <div class="produtos">
+    <div class="produto">
+      <img src="https://via.placeholder.com/100" alt="">
+      <h4>Protetor Solar Facial La Roche-Posay Anthelios</h4>
+      <p>45ml</p>
+      <div class="preco">R$ 109,99</div>
+    </div>
+
+    <a href="/pages/carrinho.html" class="produto-link">
+      <div class="produto">
+        <img src="https://via.placeholder.com/100" alt="">
+        <h4>Dorflex Analgésico Relaxante Muscular</h4>
+        <p>36 comprimidos</p>
+        <div class="preco">R$ 19,99</div>
+      </div>
+    </a>
+
+    <div class="produto">
+      <img src="https://via.placeholder.com/100" alt="">
+      <h4>Antialérgico Allegra 10 comprimidos</h4>
+      <p>Cloridrato de Fexofenadina</p>
+      <div class="preco">R$ 61,99</div>
+    </div>
+
+    <div class="produto">
+      <img src="https://via.placeholder.com/100" alt="">
+      <h4>Creatina Monohidratada 150g</h4>
+      <p>Nutrigoid Fit</p>
+      <div class="preco">R$ 52,49</div>
+    </div>
+
+    <div class="produto">
+      <img src="https://via.placeholder.com/100" alt="">
+      <h4>Dipirona Monohidratada 1g</h4>
+      <p>Cimed Genérico</p>
+      <div class="preco">R$ 7,99</div>
+    </div>
+
+    <div class="produto">
+      <img src="https://via.placeholder.com/100" alt="">
+      <h4>Creme Dental Elmex Anticárie</h4>
+      <p>Professional</p>
+      <div class="preco">R$ 22,12</div>
+    </div>
+  </div>
+</section>
+
+  <!-- Destaque 2 -->
+  <section>
+    <h2>Destaque</h2>
+    <div class="produtos">
+      <div class="produto"><img src="https://via.placeholder.com/100" alt=""><h4>Protetor Solar Facial La Roche-Posay Anthelios</h4><p>45ml</p><div class="preco">R$ 109,99</div></div>
+      <div class="produto"><img src="/pages/carrinho.html" alt=""><h4>Dorflex Analgésico Relaxante Muscular</h4><p>36 comprimidos</p><div class="preco">R$ 19,99</div></div>
+      <div class="produto"><img src="https://via.placeholder.com/100" alt=""><h4>Antialérgico Allegra 10 comprimidos</h4><p>Cloridrato de Fexofenadina</p><div class="preco">R$ 61,99</div></div>
+      <div class="produto"><img src="https://via.placeholder.com/100" alt=""><h4>Creatina Monohidratada 150g</h4><p>Nutrigoid Fit</p><div class="preco">R$ 52,49</div></div>
+      <div class="produto"><img src="https://via.placeholder.com/100" alt=""><h4>Dipirona Monohidratada 1g</h4><p>Cimed Genérico</p><div class="preco">R$ 7,99</div></div>
+      <div class="produto"><img src="https://via.placeholder.com/100" alt=""><h4>Creme Dental Elmex Anticárie</h4><p>Professional</p><div class="preco">R$ 22,12</div></div>
+    </div>
+  </section>
+
+  <footer>© 2025 Farma+ — Todos os direitos reservados.</footer>
+</body>
+</html>

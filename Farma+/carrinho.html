@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrinho - Farma+</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="d-flex align-items-center justify-content-between px-4 py-3 text-white sticky-top" style="background-color:#005eff;">
+    <div class="logo">Farma<span style="color:#ff3737;">+</span></div>
+
+    <div class="search-bar flex-grow-1 mx-4">
+      <input type="text" class="form-control" placeholder="Buscar">
+    </div>
+
+    <div class="menu d-flex gap-4">
+      <div>🧾 Pedidos</div>
+      <a href="carrinho.html" 
+        class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        🛒 Carrinho
+      </a>
+      <div>👤 Perfil</div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container my-5">
+    <h1 class="fw-bold mb-4">🛒 Meu Carrinho</h1>
+    <div class="cart-container">
+      <div id="cart-items"></div>
+
+      <!-- Resumo -->
+      <div class="summary">
+        <h4>Resumo da Compra</h4>
+        <div><span>Subtotal</span><span id="subtotal">R$ 0,00</span></div>
+        <div><span>Frete</span><span>Grátis</span></div>
+        <div class="total"><span>Total</span><span id="total">R$ 0,00</span></div>
+        <button class="btn-carrinho" onclick="finalizarCompra()">Finalizar Compra</button>
+        <button class="btn-continuar" onclick="continuarComprando()">Continuar Comprando</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="text-center py-3" style="background-color:#f1f4f8; color:#70757a;">
+    © 2025 Farma+ — Todos os direitos reservados.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

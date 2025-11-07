@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Principal - Farma+</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="d-flex align-items-center justify-content-between px-4 py-3 text-white sticky-top" style="background-color:#005eff;">
+    <div class="logo">Farma<span style="color:#ff3737;">+</span></div>
+
+    <div class="search-bar flex-grow-1 mx-4">
+      <input type="text" class="form-control" placeholder="Buscar">
+    </div>
+
+    <div class="menu d-flex gap-4">
+      <div>🧾 Pedidos</div>
+      <a href="carrinho.html" 
+        class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        🛒 Carrinho
+      </a>
+      <div>👤 Perfil</div>
+    </div>
+  </header>
+
+  <!-- CATEGORIAS -->
+  <div class="categorias px-3 py-2 d-flex flex-wrap gap-2 bg-white border-bottom">
+    <button>📦 Todas</button>
+    <button>💊 Medicamentos</button>
+    <button>💪 Suplementos</button>
+    <button>🧴 Higiene</button>
+    <button>🧒 Infantil</button>
+    <button>💅 Beleza</button>
+    <button>🔥 Promoções</button>
+  </div>
+
+  <!-- DESTAQUE -->
+  <section class="px-4 my-4">
+    <h2>Destaques</h2>
+    <div class="lojas d-flex gap-3 overflow-auto pb-2">
+      <div class="loja text-center p-2 bg-white rounded shadow-sm" style="min-width:160px;">
+        <img src="assets/img/drogacenter.png" class="mb-2" style="width:75px;height:45px;border-radius:100%;" alt="Droga Center">
+        <p>Droga Center</p><span>Grátis</span>
+      </div>
+      <div class="loja text-center p-2 bg-white rounded shadow-sm" style="min-width:160px;">
+        <img src="assets/img/drogariapacheco.png" class="mb-2" style="width:125px;height:50px;border-radius:50%;" alt="Drogaria Pacheco">
+        <p>Drogaria Pacheco</p><span>Grátis</span>
+      </div>
+      <div class="loja text-center p-2 bg-white rounded shadow-sm" style="min-width:160px;">
+        <img src="assets/img/drogasil.png" class="mb-2" style="width:80px;height:50px;border-radius:50%;" alt="Drogaria Pacheco">
+        <p>Drogasil</p><span>Grátis</span>
+      </div>
+      </div>
+        <div class="banner mt-4 d-flex align-items-center justify-content-center p-4 rounded"
+          style="background: url('assets/img/banner.png') center/contain no-repeat; height: 170px;border-radius: 25px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIS COMPRADOS -->
+  <section class="px-4 my-4">
+    <h2>Mais comprados</h2>
+    <div id="produtos" class="produtos">
+      <!-- Produto 1 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center" onclick="window.location.href='produto-dorflex.html'">
+        <img src="assets/img/dorflex/dorflex.png" class="mb-2" style="width:125px;height:100px;object-fit:contain;" alt="Dorflex">
+        <h4>Dorflex Analgésico Relaxante Muscular</h4>
+        <p>36 comprimidos</p>
+        <div class="preco fw-bold">R$ 19,99</div>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
+        <img src="assets/img/protetorsolar.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Protetor Solar">
+        <h4>Protetor Solar Facial La Roche-Posay Anthelios</h4>
+        <p>45ml</p>
+        <div class="preco fw-bold">R$ 109,99</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="text-center py-3" style="background-color:#f1f4f8; color:#70757a;">
+    © 2025 Farma+ — Todos os direitos reservados.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

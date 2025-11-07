@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Farma+</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="logo">Farma<span>+</span></div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar">
+    </div>
+    <div class="menu">
+      <div>🧾 Pedidos</div>
+      <a href="carrinho.html">🛒 Carrinho</a>
+      <div>👤 Perfil</div>
+    </div>
+  </header>
+
+  <main>
+    <h1>🛍️ Meu Carrinho</h1>
+
+    <div class="cart-container">
+      <div id="cart-items"></div>
+
+      <div class="summary">
+        <h4>Resumo da Compra</h4>
+        <div><span>Subtotal</span><span id="subtotal">R$ 0,00</span></div>
+        <div><span>Frete</span><span>Grátis</span></div>
+        <div class="total"><span>Total</span><span id="total">R$ 0,00</span></div>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+        <button onclick="continuarComprando()">Continuar Comprando</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Farma+ — Todos os direitos reservados.
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

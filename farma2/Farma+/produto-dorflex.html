@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dorflex - Farma+</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="logo">Farma<span>+</span></div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar">
+    </div>
+    <div class="menu">
+      <div>🧾 Pedidos</div>
+      <a href="carrinho.html">🛒 Carrinho</a>
+      <div>👤 Perfil</div>
+    </div>
+  </header>
+
+  <!-- DETALHE PRODUTO -->
+  <main class="produto-detalhe">
+    <div class="galeria" id="galeria">
+      <img src="assets/img/dorflex/dorflex.png" alt="Dorflex 1">
+      <img src="assets/img/dorflex/dorflex2.png" alt="Dorflex 2">
+      <img src="assets/img/dorflex/dorflex3.png" alt="Dorflex 3">
+    </div>
+
+    <div class="imagem-principal">
+      <img id="imgPrincipal" src="assets/img/dorflex/dorflex.png" alt="Dorflex">
+    </div>
+
+    <div class="info-produto">
+      <h3>Drogasil</h3>
+      <h1>Dorflex Analgésico e Relaxante Muscular 36 comprimidos</h1>
+      <p class="sub">36 comprimidos</p>
+      <div class="preco-produto">
+        <p class="preco-antigo">R$ 21,84 <span>13% off</span></p>
+        <p class="preco-novo">R$ 18,99</p>
+      </div>
+
+      <div class="quantidade">
+        <button id="menos">-</button>
+        <input type="text" value="1" id="qtd">
+        <button id="mais">+</button>
+      </div>
+
+      <button class="btn-comprar" id="btnAddCarrinho">Adicionar ao carrinho</button>
+    </div>
+  </main>
+
+  <div class="caixa-confirmacao" id="caixaConfirmacao">
+    <div class="conteudo">
+      <p>Produto adicionado ao carrinho!</p>
+      <button class="btn-continuar" onclick="fecharConfirmacao()">Continuar comprando</button>
+      <button class="btn-carrinho" onclick="window.location.href='carrinho.html'">Ir para o carrinho</button>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Farma+ — Todos os direitos reservados.
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
