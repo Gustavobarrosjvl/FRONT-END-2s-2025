@@ -9,22 +9,22 @@ O objetivo principal é demonstrar a estrutura e o funcionamento de uma loja vir
   Bootstrap 5
   JavaScript
 
-> Estrutura do Projeto:
-
-marketplace-farmacia
-├── index.html                # Página inicial
-├── produto-dorflex.html      # Página de produto (exemplo: Dorflex)
-├── carrinho.html             # Página do carrinho de compras
-│
-├── css/
-│   └── style.css             # Arquivo principal de estilos (layout, cores, fontes)
-│
-├── js/
-│   └── script.js             # Funções JS
-│
-├── img/                      # Imagens utilizadas
-│
-└── README.md
+    > Estrutura do Projeto:
+    
+    marketplace-farmacia
+    ├── index.html                # Página inicial
+    ├── produto-dorflex.html      # Página de produto (exemplo: Dorflex)
+    ├── carrinho.html             # Página do carrinho de compras
+    │
+    ├── css/
+    │   └── style.css             # Arquivo principal de estilos (layout, cores, fontes)
+    │
+    ├── js/
+    │   └── script.js             # Funções JS
+    │
+    ├── img/                      # Imagens utilizadas
+    │
+    └── README.md
 
 > Funcionalidades do Sistema:
     
