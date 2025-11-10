@@ -4,10 +4,11 @@ Este projeto é um Marketplace de Farmácia online desenvolvido com HTML, CSS e 
 O objetivo principal é demonstrar a estrutura e o funcionamento de uma loja virtual com layout moderno, design responsivo e interatividade básica.
 
 > Tecnologias Utilizadas:
-HTML5
-CSS
-Bootstrap 5
-JavaScript
+
+    HTML5
+    CSS
+    Bootstrap 5
+    JavaScript
 
 > Estrutura do Projeto:
 
