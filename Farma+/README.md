@@ -1,4 +1,4 @@
->>Marketplace de Farmácia<<
+>>Marketplace de Farmácia
 
 Este projeto é um Marketplace de Farmácia online desenvolvido com HTML, CSS e JavaScript, simulando e-commerce para venda de medicamentos e produtos farmacêuticos.
 O objetivo principal é demonstrar a estrutura e o funcionamento de uma loja virtual com layout moderno, design responsivo e interatividade básica.
