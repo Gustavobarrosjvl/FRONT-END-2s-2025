@@ -5,43 +5,40 @@ O objetivo principal é demonstrar a estrutura e o funcionamento de uma loja vir
 
 > Tecnologias Utilizadas:
 
-    HTML5
-    CSS
-    Bootstrap 5
-    JavaScript
+    > HTML5
+    > CSS
+    > Bootstrap 5
+    > JavaScript
 
 > Estrutura do Projeto:
 
     > marketplace-farmacia
-    ├── index.html                # Página inicial com banner, destaques e produtos
+    ├── index.html                # Página inicial
     ├── produto-dorflex.html      # Página de produto (exemplo: Dorflex)
     ├── carrinho.html             # Página do carrinho de compras
     │
     ├── css/
-    │   └── style.css             # Arquivo principal de estilos (layout, cores, fontes)
+    │   └── style.css             # Arquivo principal de estilos
     │
     ├── js/
-    │   └── script.js             # Funções JS (adicionar ao carrinho, total, etc.)
+    │   └── script.js             # Funções JS
     │
-    ├── img/
-    │   ├── logo.png              # Logo principal do site
-    │   ├── produtos/             # Imagens dos produtos
-    │   └── icones/               # Ícones auxiliares
+    ├── img/                      # Imagens usadas
     │
     └── README.md
 
 
 > Funcionalidades do Sistema:
     
-      > Página inicial com banner e listagem de produtos
-      > Páginas individuais de produto com descrição, preço e botão de compra
-      > Botão “Adicionar ao Carrinho” que soma automaticamente os valores
-      > Resumo da compra exibindo subtotal, frete e total
-      > Frete Grátis incluído no cálculo do carrinho
-      > Menu de navegação fixo e responsivo
-      > Botões de navegação (ex: voltar, ir para o carrinho, etc.)
-      > Design moderno e limpo, com cores padronizadas em tons de azul e branco
-      > Layout responsivo, adaptável para desktop e dispositivos móveis
+    > Página inicial com banner e listagem de produtos
+    > Páginas individuais de produto com descrição, preço e botão de compra
+    > Botão “Adicionar ao Carrinho” que soma automaticamente os valores
+    > Resumo da compra exibindo subtotal, frete e total
+    > Frete Grátis incluído no cálculo do carrinho
+    > Menu de navegação fixo e responsivo
+    > Botões de navegação (ex: voltar, ir para o carrinho, etc.)
+    > Design moderno e limpo, com cores padronizadas em tons de azul e branco
+    > Layout responsivo, adaptável para desktop e dispositivos móveis
 
 > Como Executar o Projeto:
 
@@ -54,16 +51,15 @@ O objetivo principal é demonstrar a estrutura e o funcionamento de uma loja vir
 
   Durante o desenvolvimento deste projeto foram aplicados conceitos como:
   
-    > Estrutura semântica com HTML5
-    > Organização e hierarquia visual com Bootstrap
+    > Estrutura com HTML5
+    > Organização visual com Bootstrap
     > Separação de responsabilidades entre HTML, CSS e JS
-    > Manipulação de elementos do DOM com JavaScript
     > Criação de componentes visuais reutilizáveis (cards, banners, botões)
     > Cálculo e atualização dinâmica de preços no carrinho de compras
 
 > Organização e Boas Práticas
 
-    > Layout modularizado em seções reutilizáveis
+    > Layout modularizado
     > Design responsivo, adaptado a várias resoluções
     > Script e CSS separados
     > Estrutura visual e responsiva construída com utensílios do Bootstrap
