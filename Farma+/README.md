@@ -4,15 +4,15 @@ Este projeto é um Marketplace de Farmácia online desenvolvido com HTML, CSS e 
 O objetivo principal é demonstrar a estrutura e o funcionamento de uma loja virtual com layout moderno, design responsivo e interatividade básica.
 
 > Tecnologias Utilizadas:
-  HTML5
-  CSS
-  Bootstrap 5
-  JavaScript
+HTML5
+CSS
+Bootstrap 5
+JavaScript
 
-    > Estrutura do Projeto:
-    
-    marketplace-farmacia
-    ├── index.html                # Página inicial
+> Estrutura do Projeto:
+
+    > marketplace-farmacia
+    ├── index.html                # Página inicial com banner, destaques e produtos
     ├── produto-dorflex.html      # Página de produto (exemplo: Dorflex)
     ├── carrinho.html             # Página do carrinho de compras
     │
@@ -20,11 +20,15 @@ O objetivo principal é demonstrar a estrutura e o funcionamento de uma loja vir
     │   └── style.css             # Arquivo principal de estilos (layout, cores, fontes)
     │
     ├── js/
-    │   └── script.js             # Funções JS
+    │   └── script.js             # Funções JS (adicionar ao carrinho, total, etc.)
     │
-    ├── img/                      # Imagens utilizadas
+    ├── img/
+    │   ├── logo.png              # Logo principal do site
+    │   ├── produtos/             # Imagens dos produtos
+    │   └── icones/               # Ícones auxiliares
     │
     └── README.md
+
 
 > Funcionalidades do Sistema:
     
