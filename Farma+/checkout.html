@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Farma+</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <!-- CABEÇALHO -->
+  <header class="d-flex align-items-center justify-content-between px-4 py-3 text-white sticky-top" style="background-color:#005eff;">
+    <div class="logo">Farma<span style="color:#ff3737;">+</span></div>
+
+    <div class="search-bar flex-grow-1 mx-4">
+      <input type="text" class="form-control" placeholder="Buscar">
+    </div>
+
+    <div class="menu d-flex gap-4">
+      <div>🧾 Pedidos</div>
+      <a href="carrinho.html"
+        class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        🛒 Carrinho
+      </a>
+      <div>👤 Perfil</div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="checkout-container">
+    <section class="pagamentos">
+      <h2>Pagamentos</h2>
+      <hr>
+      <div class="cartoes">
+        <div class="cartao selecionado">
+          <div class="cartao-top">
+            <input type="checkbox" checked>
+            <span>**** **** **** 4202</span>
+            <button class="editar">Editar</button>
+          </div>
+          <p>Guilherme Martins<br>Mastercard<br>Débito<br>*******</p>
+        </div>
+
+        <div class="cartao">
+          <div class="cartao-top">
+            <input type="checkbox">
+            <span>**** **** **** 5607</span>
+            <button class="editar">Editar</button>
+          </div>
+          <p>Guilherme Martins<br>Mastercard<br>Crédito<br>*******</p>
+        </div>
+      </div>
+    </section>
+
+    <aside class="resumo">
+      <h3>Total</h3>
+      <p class="total">R$ 8,99</p>
+      <button class="concluir" onclick="window.location.href='confirmacao.html'">
+        Concluir pagamento
+      </button>
+    </aside>
+
+    <section class="enderecos">
+      <h2>Endereços</h2>
+      <hr>
+      <div class="enderecos-lista">
+        <div class="endereco selecionado">
+          <div class="endereco-top">
+            <input type="checkbox" checked>
+            <span>QBR 4 Bloco B Apartamento 21</span>
+            <button class="editar">Editar</button>
+          </div>
+          <p>Residencial Santos Dumont<br>Santa Maria<br>73084-320<br>Brasil</p>
+        </div>
+
+        <div class="endereco">
+          <div class="endereco-top">
+            <input type="checkbox">
+            <span>SQS 115 Sul Bloco B Apt 201</span>
+            <button class="editar">Editar</button>
+          </div>
+          <p>Asa Sul<br>Brasília<br>73084-320<br>Brasil</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,4 +1,4 @@
-  // ======== FUNÇÕES DE CARRINHO ========
+  //FUNÇÕES DE CARRINHO
   function carregarCarrinho() {
     const cart = JSON.parse(localStorage.getItem("carrinho")) || [];
     const container = document.getElementById("cart-items");
@@ -51,11 +51,10 @@
     document.getElementById("total").innerText = `R$ ${subtotal.toFixed(2)}`;
   }
 
-  function finalizarCompra() {
-    alert("✅ Compra finalizada com sucesso!");
-    localStorage.removeItem("carrinho");
-    carregarCarrinho();
-  }
+    function finalizarCompra() {
+      carregarCarrinho();
+      window.location.href = "checkout.html"; 
+    }
 
   function continuarComprando() {
     window.location.href = "index.html";
@@ -63,7 +62,7 @@
 
   window.onload = carregarCarrinho;
 
-// ======== FUNÇÕES DE PRODUTO ========
+//FUNÇÕES DE PRODUTO
 
   // Produto base
   const produtoDorflex = {
