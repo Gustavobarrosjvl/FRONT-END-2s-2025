@@ -1,0 +1,81 @@
+/* Confirmacao */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 60px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+/* check verde */
+.checkmark {
+  font-size: 80px;
+  color: #28a745;
+  background: #e6f8eb;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* botões */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primario {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primario:hover {
+  background-color: #0069d9;
+}
+
+.btn-secundario {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.btn-secundario:hover {
+  background-color: #e4e4e4;
+}

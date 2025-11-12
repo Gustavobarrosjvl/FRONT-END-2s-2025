@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Meus Pedidos - Farma+</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/stylepedidos.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="d-flex align-items-center justify-content-between px-4 py-3 text-white sticky-top" style="background-color:#005eff;">
+    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; cursor: pointer;">
+    </a>
+
+    <div class="search-bar flex-grow-1 mx-4">
+      <input type="text" class="form-control" placeholder="Buscar">
+    </div>
+
+    <div class="menu d-flex gap-4">
+      <a href="meus-pedidos.html"
+        class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        🧾 Meus Pedidos
+      </a>
+      <a href="carrinho.html" 
+        class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        🛒 Carrinho
+      </a>
+      <div>👤 Perfil</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pedido-atual">
+      <div class="produto-info">
+        <img src="assets/img/dorflex/dorflex.png" alt="Dorflex">
+        <div class="produto-detalhes">
+          <h3>Dorflex Analgésico e Relaxante Muscular 36 comprimidos</h3>
+          <p>Pague Menos</p>
+        </div>
+        <div class="preco">
+          R$ 18,99<br>
+          <span style="font-size:0.8rem;color:gray;">Quantidade: 1</span>
+        </div>
+      </div>
+
+      <p class="entregador"><strong>Entregador:</strong> Marcelo ⭐⭐⭐⭐⭐</p>
+
+      <div class="barra-status">
+        <div>💳 Pagamento<br>confirmado</div>
+        <div>👨‍🍳 Em<br>separação</div>
+        <div class="ativo">🚚 Saiu para<br>entrega</div>
+        <div>📦 Entregue</div>
+      </div>
+
+      <div class="barra-progresso">
+        <div class="preenchido"></div>
+      </div>
+
+      <p style="font-size:0.85rem;margin-top:10px;color:gray;">Previsão de entrega: <strong>18h40 - 19h</strong></p>
+      <button class="chat-btn">Chat</button>
+    </section>
+
+    <section class="historico">
+      <h4>Histórico</h4>
+
+      <div class="item-historico">
+        <img src="assets/img/creatina.png" alt="Creatina">
+        <div class="info-produto">
+          <h5>Creatina Monohidratada Integral Medica 300g</h5>
+          <p>Drograria Rosário</p>
+          <p style="font-size:0.8rem;">23 de ago. de 2025</p>
+        </div>
+        <div class="preco-historico">
+          R$ 52,49<br>
+          <span style="font-size:0.8rem;color:gray;">Quantidade: 1</span>
+        </div>
+      </div>
+
+      <!-- Itens repetidos -->
+      <div class="item-historico">
+        <img src="assets/img/protetorsolar.png" alt="Protetor">
+        <div class="info-produto">
+          <h5>Protetor Solar</h5>
+          <p>Drogasil</p>
+          <p style="font-size:0.8rem;">23 de ago. de 2025</p>
+        </div>
+        <div class="preco-historico">
+          R$ 75,49<br>
+          <span style="font-size:0.8rem;color:gray;">Quantidade: 1</span>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
