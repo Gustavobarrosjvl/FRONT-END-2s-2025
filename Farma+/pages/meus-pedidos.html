@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
   <title>Meus Pedidos - Farma+</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/stylepedidos.css">
+  <link rel="stylesheet" href="../assets/css/stylepedidos.css">
 </head>
 <body>
 
   <!-- CABEÇALHO -->
   <header class="d-flex align-items-center justify-content-between px-4 py-3 text-white sticky-top" style="background-color:#005eff;">
-    <a href="index.html" class="d-flex align-items-center text-decoration-none">
-      <img src="assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; cursor: pointer;">
+    <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; cursor: pointer;">
     </a>
 
     <div class="search-bar flex-grow-1 mx-4">
@@ -30,14 +29,19 @@
         style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
         🛒 Carrinho
       </a>
-      <div>👤 Perfil</div>
+      <a href="perfil.html" 
+        class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        👤 Perfil
+      </a>
     </div>
   </header>
 
   <main>
+    <h1 class="fw-bold mb-4"> Meus Pedidos</h1>
     <section class="pedido-atual">
       <div class="produto-info">
-        <img src="assets/img/dorflex/dorflex.png" alt="Dorflex">
+        <img src="../assets/img/dorflex/dorflex.png" alt="Dorflex">
         <div class="produto-detalhes">
           <h3>Dorflex Analgésico e Relaxante Muscular 36 comprimidos</h3>
           <p>Pague Menos</p>
@@ -69,7 +73,7 @@
       <h4>Histórico</h4>
 
       <div class="item-historico">
-        <img src="assets/img/creatina.png" alt="Creatina">
+        <img src="../assets/img/creatina.png" alt="Creatina">
         <div class="info-produto">
           <h5>Creatina Monohidratada Integral Medica 300g</h5>
           <p>Drograria Rosário</p>
@@ -83,7 +87,7 @@
 
       <!-- Itens repetidos -->
       <div class="item-historico">
-        <img src="assets/img/protetorsolar.png" alt="Protetor">
+        <img src="../assets/img/protetorsolar.png" alt="Protetor">
         <div class="info-produto">
           <h5>Protetor Solar</h5>
           <p>Drogasil</p>
@@ -94,9 +98,11 @@
           <span style="font-size:0.8rem;color:gray;">Quantidade: 1</span>
         </div>
       </div>
-
+  <!-- RODAPÉ -->
+  <footer class="text-center py-3" style="background-color:#f1f4f8; color:#70757a;">
+    © 2025 Farma+ — Todos os direitos reservados.
+  </footer>
     </section>
   </main>
-
 </body>
 </html>

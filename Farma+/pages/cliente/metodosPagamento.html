@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Métodos de Pagamento - Cliete - Farma+</title>
+  <link rel="stylesheet" href="../../assets/css/adminFarmacia.css">
+  <link rel="stylesheet" href="../../assets/css/Mpagamento.css">
+
+</head>
+<body>
+
+  <div class="sidebar">
+    <a href="../../index.html">
+      <img src="../../assets/img/logo_farma+.png" style="height: 40px;">
+    </a>
+
+    <h3>Meu Perfil</h3>
+
+    <a href="../cliente/infos-cliente.html">Minhas Informações</a>
+    <a href="metodosPagamento.html" class="active">Métodos de Pagamento</a>
+    <a href="../../pages/meus-pedidos.html">Meus Pedidos</a>
+    <a href="../../pages/carrinho.html">Carrinho</a>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Métodos de Pagamento</h1>
+    </header>
+
+    <button class="btn-add" onclick="abrirModal()">+ Adicionar Cartão</button>
+
+    <div id="listaCartoes"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-bg" id="modalBg">
+    <div class="modal">
+      <h2>Novo Cartão</h2>
+
+      <label>Nome no Cartão</label>
+      <input type="text" id="nomeCartao" required>
+
+      <label>Número do Cartão</label>
+      <input type="text" id="numeroCartao" maxlength="16" required>
+
+      <label>Validade (MM/AA)</label>
+      <input type="text" id="validadeCartao" placeholder="12/29" maxlength="5" required>
+
+      <label>CVV</label>
+      <input type="text" id="cvvCartao" maxlength="3" required>
+
+      <button onclick="salvarCartao()">Salvar Cartão</button>
+      <button onclick="fecharModal()" style="background:#777; margin-top:10px;">Cancelar</button>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal() {
+      document.getElementById("modalBg").style.display = "flex";
+    }
+
+    function fecharModal() {
+      document.getElementById("modalBg").style.display = "none";
+    }
+
+    function salvarCartao() {
+      const nome = document.getElementById("nomeCartao").value;
+      const numero = document.getElementById("numeroCartao").value;
+      const validade = document.getElementById("validadeCartao").value;
+
+      if (!nome || !numero || !validade) {
+        alert("Preencha todos os campos!");
+        return;
+      }
+
+      let cartoes = JSON.parse(localStorage.getItem("cartoesCliente")) || [];
+
+      cartoes.push({
+        nome,
+        numero,
+        validade
+      });
+
+      localStorage.setItem("cartoesCliente", JSON.stringify(cartoes));
+
+      fecharModal();
+      carregarCartoes();
+      alert("💳 Cartão adicionado com sucesso!");
+    }
+
+    function excluirCartao(index) {
+      let cartoes = JSON.parse(localStorage.getItem("cartoesCliente")) || [];
+      cartoes.splice(index, 1);
+      localStorage.setItem("cartoesCliente", JSON.stringify(cartoes));
+      carregarCartoes();
+    }
+
+    function carregarCartoes() {
+      const lista = document.getElementById("listaCartoes");
+      lista.innerHTML = "";
+
+      const cartoes = JSON.parse(localStorage.getItem("cartoesCliente")) || [];
+
+      if (cartoes.length === 0) {
+        lista.innerHTML = "<p>Nenhum cartão cadastrado.</p>";
+        return;
+      }
+
+      cartoes.forEach((c, i) => {
+        lista.innerHTML += `
+          <div class="cartao">
+            <strong>${c.nome}</strong><br>
+            <span>**** **** **** ${c.numero.slice(-4)}</span><br>
+            <span>Validade: ${c.validade}</span><br>
+            <button class="btn-delete" onclick="excluirCartao(${i})">Excluir</button>
+          </div>
+        `;
+      });
+    }
+
+    window.onload = carregarCartoes;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Minhas Informações - Cliente - Farma+</title>
+  <link rel="stylesheet" href="../../assets/css/adminFarmacia.css">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="../../index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="../../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto;">
+    </a>
+    <h3>Meu Perfil</h3>
+
+    <a href="minhas-informacoes.html" class="active">Minhas Informações</a>
+    <a href="../../pages/cliente/metodosPagamento.html">Métodos de Pagementos</a>
+    <a href="../../pages/meus-pedidos.html">Meus Pedidos</a>
+    <a href="../../pages/carrinho.html">Carrinho</a>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Minhas Informações</h1>
+    </header>
+
+    <form id="clienteForm">
+      <label>Nome Completo</label>
+      <input type="text" id="nomeCliente" required>
+
+      <label>Email</label>
+      <input type="email" id="emailCliente" required>
+
+      <label>Telefone</label>
+      <input type="text" id="telefoneCliente" placeholder="(00) 00000-0000" required>
+
+      <label>CPF</label>
+      <input type="text" id="cpfCliente" placeholder="000.000.000-00" required>
+
+      <label>Data de Nascimento</label>
+      <input type="date" id="nascimentoCliente" required>
+
+      <button type="submit">Salvar Informações</button>
+    </form>
+  </div>
+
+  <script>
+    // Carregar dados já salvos
+    window.onload = () => {
+      const cliente = JSON.parse(localStorage.getItem("clienteInfo"));
+
+      if (cliente) {
+        document.getElementById("nomeCliente").value = cliente.nome;
+        document.getElementById("emailCliente").value = cliente.email;
+        document.getElementById("telefoneCliente").value = cliente.telefone;
+        document.getElementById("cpfCliente").value = cliente.cpf;
+        document.getElementById("nascimentoCliente").value = cliente.nascimento;
+      }
+    };
+
+    // Salvar dados
+    document.getElementById("clienteForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const cliente = {
+        nome: document.getElementById("nomeCliente").value,
+        email: document.getElementById("emailCliente").value,
+        telefone: document.getElementById("telefoneCliente").value,
+        cpf: document.getElementById("cpfCliente").value,
+        nascimento: document.getElementById("nascimentoCliente").value
+      };
+
+      localStorage.setItem("clienteInfo", JSON.stringify(cliente));
+
+      alert("✅ Informações atualizadas com sucesso!");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Informações da Farmácia - Admin Farmácia - Farma+</title>
+  <link rel="stylesheet" href="../../assets/css/adminFarmacia.css">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="../../index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="../../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; ">
+    </a>
+    <h3>Minha Farmácia</h3>
+    <a href="../adminFarmacia/dashboard.html">Dashboard</a>
+    <a href="../adminFarmacia/produtos.html">Produtos</a>
+    <a href="../adminFarmacia/pedidos.html">Pedidos</a>
+    <a href="farmacia-info.html" class="active">Informações</a>
+    <a href="../adminFarmacia/perfil-farmacia.html">Perfil</a>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Informações da Farmácia</h1>
+    </header>
+
+    <form id="formInfoFarmacia">
+      <label>Nome da Farmácia</label>
+      <input id="nomeFarmacia" type="text" required>
+
+      <label>CNPJ</label>
+      <input id="cnpj" type="text" required>
+
+      <label>Endereço</label>
+      <input id="endereco" type="text" required>
+
+      <label>Telefone</label>
+      <input id="telefone" type="text" required>
+
+      <label>Email</label>
+      <input id="email" type="email" required>
+
+      <h3 style="margin-top: 25px;">Horário de Funcionamento</h3>
+
+      <div class="horarios-container">
+        <label>Segunda a Sexta</label>
+        <input id="segSexInicio" type="time">
+        <input id="segSexFim" type="time">
+
+        <label>Sábado</label>
+        <input id="sabInicio" type="time">
+        <input id="sabFim" type="time">
+
+        <label>Domingo</label>
+        <input id="domInicio" type="time">
+        <input id="domFim" type="time">
+      </div>
+
+      <label style="margin-top: 20px;">Logo</label>
+      <input id="logoFarmacia" type="file" accept="image/*">
+
+      <button type="submit">Salvar Informações</button>
+    </form>
+  </div>
+
+  <script>
+    function salvarInfoFarmacia() {
+      const campos = [
+        "nomeFarmacia",
+        "cnpj",
+        "endereco",
+        "telefone",
+        "email",
+        "segSexInicio",
+        "segSexFim",
+        "sabInicio",
+        "sabFim",
+        "domInicio",
+        "domFim"
+      ];
+
+      campos.forEach(campo => {
+        localStorage.setItem(campo, document.getElementById(campo).value);
+      });
+
+      alert("✅ Informações salvas com sucesso!");
+    }
+
+    function carregarInfoFarmacia() {
+      const campos = [
+        "nomeFarmacia",
+        "cnpj",
+        "endereco",
+        "telefone",
+        "email",
+        "segSexInicio",
+        "segSexFim",
+        "sabInicio",
+        "sabFim",
+        "domInicio",
+        "domFim"
+      ];
+
+      campos.forEach(campo => {
+        if (localStorage.getItem(campo)) {
+          document.getElementById(campo).value = localStorage.getItem(campo);
+        }
+      });
+    }
+
+    document.getElementById("formInfoFarmacia").addEventListener("submit", function(e) {
+      e.preventDefault();
+      salvarInfoFarmacia();
+    });
+    carregarInfoFarmacia();
+  </script>
+</body>
+</html>

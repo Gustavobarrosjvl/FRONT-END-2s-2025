@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil - Admin Farmácia - Farma+</title>
+  <link rel="stylesheet" href="../../assets/css/adminFarmacia.css">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="../../index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="../../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; ">
+    </a>
+    <h3>Minha Farmácia</h3>
+    <a href="../adminFarmacia/dashboard.html">Dashboard</a>
+    <a href="../adminFarmacia/produtos.html">Produtos</a>
+    <a href="../adminFarmacia/pedidos.html">Pedidos</a>
+    <a href="../adminFarmacia/infos-farmacia.html">Informações</a>
+    <a href="perfil.html" class="active">Perfil</a>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Perfil do Administrador</h1>
+    </header>
+
+    <form id="formPerfil">
+      <label>Nome</label>
+      <input id="perfilNome" type="text" required>
+
+      <label>Email</label>
+      <input id="perfilEmail" type="email" required>
+
+      <label>Senha</label>
+      <input id="perfilSenha" type="password" required>
+
+      <button type="submit">Salvar Alterações</button>
+    </form>
+  </div>
+
+  <script>
+    function salvarPerfil() {
+      const campos = ["perfilNome", "perfilEmail", "perfilSenha"];
+
+      campos.forEach(campo => {
+        localStorage.setItem(campo, document.getElementById(campo).value);
+      });
+
+      alert("✅ Perfil atualizado com sucesso!");
+    }
+
+    function carregarPerfil() {
+      const campos = ["perfilNome", "perfilEmail", "perfilSenha"];
+
+      campos.forEach(campo => {
+        if (localStorage.getItem(campo)) {
+          document.getElementById(campo).value = localStorage.getItem(campo);
+        }
+      });
+    }
+
+    document.getElementById("formPerfil").addEventListener("submit", function(e) {
+      e.preventDefault();
+      salvarPerfil();
+    });
+
+    carregarPerfil();
+  </script>
+</body>
+</html>

@@ -57,7 +57,7 @@
     }
 
   function continuarComprando() {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
   }
 
   window.onload = carregarCarrinho;
@@ -69,7 +69,7 @@
     id: 1,
     nome: "Dorflex Analgésico e Relaxante Muscular",
     preco: 18.99,
-    img: "assets/img/dorflex/dorflex.png"
+    img: "../assets/img/dorflex/dorflex.png"
   };
 
   // --- BOTÃO ADICIONAR AO CARRINHO ---

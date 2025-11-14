@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Produto 1 Dorflex - Farma+</title>
+  <title>Produto Dorflex - Farma+</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/rodape.css">
+
 </head>
 <body>
 
   <!-- CABEÇALHO -->
   <header class="d-flex align-items-center justify-content-between px-4 py-3 text-white sticky-top" style="background-color:#005eff;">
-    <a href="index.html" class="d-flex align-items-center text-decoration-none">
-      <img src="assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; cursor: pointer;">
+    <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; cursor: pointer;">
     </a>
 
     <div class="search-bar flex-grow-1 mx-4">
@@ -30,21 +31,25 @@
         style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
         🛒 Carrinho
       </a>
-      <div>👤 Perfil</div>
+      <a href="perfil.html" 
+        class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        👤 Perfil
+      </a>
     </div>
   </header>
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main class="produto-detalhe">
     <div class="galeria">
-      <img src="assets/img/dorflex/dorflex.png" alt="Dorflex 1">
-      <img src="assets/img/dorflex/dorflex2.png" alt="Dorflex 2">
-      <img src="assets/img/dorflex/dorflex3.png" alt="Dorflex 3">
-      <img src="assets/img/dorflex/dorflex4.png " alt="Dorflex 4">
+      <img src="../assets/img/dorflex/dorflex.png" alt="Dorflex 1">
+      <img src="../assets/img/dorflex/dorflex2.png" alt="Dorflex 2">
+      <img src="../assets/img/dorflex/dorflex3.png" alt="Dorflex 3">
+      <img src="../assets/img/dorflex/dorflex4.png " alt="Dorflex 4">
     </div>
 
     <div class="imagem-principal">
-      <img src="assets/img/dorflex/dorflex.png" alt="Dorflex Analgésico">
+      <img src="../assets/img/dorflex/dorflex.png" alt="Dorflex Analgésico">
     </div>
 
     <div class="info-produto">
@@ -122,12 +127,57 @@
     </div>
   </div>
 
-  <!-- RODAPÉ -->
-  <footer>
-    © 2025 Farma+ — Todos os direitos reservados.
-  </footer>
+  <!-- Rodapé -->
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-container">
+      <!-- Sobre -->
+      <div class="footer-col">
+        <img src="../assets/img/logo_farma+.png" alt="Logo da Farma+" class="footer-logo">
+        <p>
+          Cuidando da sua saúde com qualidade e confiança.  
+          Atendimento online e nas lojas físicas.
+        </p>
+      </div>
+
+      <!-- Serviços -->
+      <div class="footer-col">
+        <h6>Serviços</h6>
+        <ul>
+          <li><a href="../index.html">Clique e Retire</a></li>
+          <li><a href="../index.html">Programa de Assinaturas</a></li>
+          <li><a href="../index.html">Manipulação</a></li>
+          <li><a href="../index.html">Atendimento Farmacêutico</a></li>
+        </ul>
+      </div>
+
+      <!-- Institucional -->
+      <div class="footer-col">
+        <h6>Institucional</h6>
+        <ul>
+          <li><a href="../index.html">Sobre Nós</a></li>
+          <li><a href="../index.html">Trabalhe Conosco</a></li>
+          <li><a href="../index.html">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Atendimento -->
+      <div class="footer-col">
+        <h6>Atendimento</h6>
+        <p>📞 SAC: <strong>0800 000 0000</strong></p>
+        <p>💬 WhatsApp: <strong>(61) 90000-0000</strong></p>
+        <p>✉️ <a href="sacfarma+@farmacia.com">contato@farma+.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Farma+. Todos os direitos reservados.</p>
+    <p>CNPJ: 00.000.000/0001-00 | Brasília/DF</p>
+  </div>
+</footer> 
 
   <!-- Scripts -->
-  <script src="assets/js/script.js"></script>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

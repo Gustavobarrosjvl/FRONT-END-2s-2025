@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
   <title>Página Principal - Farma+</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rodape.css">
 </head>
 <body>
 
@@ -20,17 +20,21 @@
     </div>
 
     <div class="menu d-flex gap-4">
-      <a href="meus-pedidos.html"
+      <a href="pages/meus-pedidos.html"
         class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
         style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
         🧾 Meus Pedidos
       </a>
-      <a href="carrinho.html" 
+      <a href="pages/carrinho.html" 
         class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
         style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
         🛒 Carrinho
       </a>
-      <div>👤 Perfil</div>
+      <a href="pages/perfil.html" 
+        class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded" 
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        👤 Perfil
+      </a>
     </div>
   </header>
 
@@ -48,15 +52,33 @@
   <!-- DESTAQUE -->
   <section class="px-4 my-4">
     <h2>Destaques</h2>
+    <!-- Droga Center -->
     <div class="lojas d-flex gap-3 overflow-auto pb-2">
       <div class="loja text-center p-2 bg-white rounded shadow-sm" style="min-width:160px;">
         <img src="assets/img/drogacenter.png" class="mb-2" style="width:75px;height:45px;border-radius:100%;" alt="Droga Center">
         <p>Droga Center</p><span>Grátis</span>
       </div>
+      <!-- ROSÁRIO -->
       <div class="loja text-center p-2 bg-white rounded shadow-sm" style="min-width:160px;">
-        <img src="assets/img/drogariapacheco.png" class="mb-2" style="width:125px;height:50px;border-radius:50%;" alt="Drogaria Pacheco">
+        <img src="assets/img/rosario.png" class="mb-2" style="width:125px;height:50px;border-radius:50%;" alt="Drogaria Pacheco">
+        <p>Drogaria Rosário</p><span>Grátis</span>
+      </div>
+      <!-- RAIA -->
+      <div class="loja text-center p-2 bg-white rounded shadow-sm" style="min-width:160px;">
+        <img src="assets/img/raia.png" class="mb-2" style="width:125px;height:50px;border-radius:50%;" alt="Drogaria Pacheco">
         <p>Drogaria Pacheco</p><span>Grátis</span>
       </div>
+      <!-- BRASIL -->
+      <div class="loja text-center p-2 bg-white rounded shadow-sm" style="min-width:160px;">
+        <img src="assets/img/brasil.png" class="mb-2" style="width:125px;height:50px;border-radius:50%;" alt="Drogaria Pacheco">
+        <p>Drogaria Pacheco</p><span>Grátis</span>
+      </div>
+      <!-- SP -->
+      <div class="loja text-center p-2 bg-white rounded shadow-sm" style="min-width:160px;">
+        <img src="assets/img/sp.png" class="mb-2" style="width:125px;height:100px;border-radius:50%;" alt="Drogaria Pacheco">
+        <p>Drogaria Pacheco</p><span>Grátis</span>
+      </div>
+      <!-- DROGASIL -->
       <div class="loja text-center p-2 bg-white rounded shadow-sm" style="min-width:160px;">
         <img src="assets/img/drogasil.png" class="mb-2" style="width:80px;height:50px;border-radius:50%;" alt="Drogaria Pacheco">
         <p>Drogasil</p><span>Grátis</span>
@@ -73,28 +95,136 @@
   <section class="px-4 my-4">
     <h2>Mais comprados</h2>
     <div id="produtos" class="produtos">
+
       <!-- Produto 1 -->
-      <div class="produto bg-white p-3 rounded shadow-sm text-center" onclick="window.location.href='produto-dorflex.html'">
+      <div class="produto bg-white p-3 rounded shadow-sm text-center" onclick="window.location.href='pages/produto-dorflex.html'">
         <img src="assets/img/dorflex/dorflex.png" class="mb-2" style="width:125px;height:100px;object-fit:contain;" alt="Dorflex">
         <h4>Dorflex Analgésico Relaxante Muscular</h4>
         <p>36 comprimidos</p>
-        <div class="preco fw-bold">R$ 19,99</div>
+        <div class="preco fw-bold">R$ 18,99</div>
       </div>
 
       <!-- Produto 2 -->
-      <div class="produto bg-white p-3 rounded shadow-sm text-center" onclick="window.location.href='produto-protetorsolar.html'">
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
         <img src="assets/img/protetorsolar.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Protetor Solar">
         <h4>Protetor Solar Facial La Roche-Posay Anthelios</h4>
         <p>45ml</p>
         <div class="preco fw-bold">R$ 109,99</div>
       </div>
+
+      <!-- Produto 3 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
+        <img src="assets/img/produtos/novalgina.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Novalgina">
+        <h4>Novalgina 1g</h4>
+        <p>10 comprimidos</p>
+        <div class="preco fw-bold">R$ 14,49</div>
+      </div>
+
+      <!-- Produto 4 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
+        <img src="assets/img/produtos/clear.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Shampoo Clear">
+        <h4>Shampoo Clear Men</h4>
+        <p>200ml</p>
+        <div class="preco fw-bold">R$ 21,90</div>
+      </div>
+
+      <!-- Produto 5 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
+        <img src="assets/img/produtos/nivea.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Hidratante Nivea">
+        <h4>Creme Hidratante Nivea Soft Milk</h4>
+        <p>200ml</p>
+        <div class="preco fw-bold">R$ 17,99</div>
+      </div>
+
+      <!-- Produto 6 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
+        <img src="assets/img/produtos/vitamina c.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Vitamina C">
+        <h4>Vitamina C Efervescente</h4>
+        <p>10 comprimidos</p>
+        <div class="preco fw-bold">R$ 15,90</div>
+      </div>
+      <!-- Produto 7 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
+        <img src="assets/img/produtos/secador.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Dorflex">
+        <h4>Secador de Cabelo Mondial</h4>
+        <p>100w</p>
+        <div class="preco fw-bold">R$ 180,99</div>
+      </div>
+
+      <!-- Produto 8 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
+        <img src="assets/img/produtos/benegripe.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Benegripe">
+        <h4>Benegripe Caixa com 20 Cápsulas</h4>
+        <p>Para gripe e resfriado</p>
+        <div class="preco fw-bold">R$ 29,90</div>
+      </div>
+
+      <!-- Produto 9 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
+        <img src="assets/img/produtos/escova.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Clear Men">
+        <h4>Escova de Dente Curaprox</h4>
+        <div class="preco fw-bold">R$ 31,00</div>
+      </div>
+
+      <!-- Produto 10 -->
+      <div class="produto bg-white p-3 rounded shadow-sm text-center">
+        <img src="assets/img/produtos/fralda.png" class="mb-2" style="width:100px;height:100px;object-fit:contain;" alt="Pampers">
+        <h4>Fralda Pampers Confort Sec G</h4>
+        <p>Pacote com 30 unidades</p>
+        <div class="preco fw-bold">R$ 49,99</div>
+      </div>
     </div>
   </section>
 
-  <!-- RODAPÉ -->
-  <footer class="text-center py-3" style="background-color:#f1f4f8; color:#70757a;">
-    © 2025 Farma+ — Todos os direitos reservados.
-  </footer>
+  <!-- Rodapé -->
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-container">
+      <!-- Sobre -->
+      <div class="footer-col">
+        <img src="../assets/img/logo_farma+.png" alt="Logo da Farma+" class="footer-logo">
+        <p>
+          Cuidando da sua saúde com qualidade e confiança.  
+          Atendimento online e nas lojas físicas.
+        </p>
+      </div>
+
+      <!-- Serviços -->
+      <div class="footer-col">
+        <h6>Serviços</h6>
+        <ul>
+          <li><a href="../index.html">Clique e Retire</a></li>
+          <li><a href="../index.html">Programa de Assinaturas</a></li>
+          <li><a href="../index.html">Manipulação</a></li>
+          <li><a href="../index.html">Atendimento Farmacêutico</a></li>
+        </ul>
+      </div>
+
+      <!-- Institucional -->
+      <div class="footer-col">
+        <h6>Institucional</h6>
+        <ul>
+          <li><a href="../index.html">Sobre Nós</a></li>
+          <li><a href="../index.html">Trabalhe Conosco</a></li>
+          <li><a href="../index.html">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Atendimento -->
+      <div class="footer-col">
+        <h6>Atendimento</h6>
+        <p>📞 SAC: <strong>0800 000 0000</strong></p>
+        <p>💬 WhatsApp: <strong>(61) 90000-0000</strong></p>
+        <p>✉️ <a href="sacfarma+@farmacia.com">contato@farma+.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Farma+. Todos os direitos reservados.</p>
+    <p>CNPJ: 00.000.000/0001-00 | Brasília/DF</p>
+  </div>
+</footer>
 
   <!-- Scripts -->
   <script src="assets/js/script.js"></script>

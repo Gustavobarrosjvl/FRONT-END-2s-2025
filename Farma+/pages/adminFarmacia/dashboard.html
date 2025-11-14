@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Dashboard - Admin Farmácia - Farma+</title>
+  <link rel="stylesheet" href="../../assets/css/adminFarmacia.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="../../index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="../../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; ">
+    </a>
+    <h3>Minha Farmácia</h3>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="../adminFarmacia/produtos.html">Produtos</a>
+    <a href="../adminFarmacia/pedidos.html">Pedidos</a>
+    <a href="../adminFarmacia/infos-farmacia.html" class="active">Informações</a>
+    <a href="../adminFarmacia/perfil-farmacia.html">Perfil</a>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Dashboard</h1>
+    </header>
+
+    <div class="cards">
+      <div class="card"><h3>Produtos</h3><p>48</p></div>
+      <div class="card"><h3>Pedidos Hoje</h3><p>22</p></div>
+      <div class="card"><h3>Pedidos no Mês</h3><p>310</p></div>
+      <div class="card"><h3>Vendas (R$)</h3><p>8.520,00</p></div>
+      <div class="card"><h3>Clientes Ativos</h3><p>120</p></div>
+      <div class="card"><h3>Avaliação Média</h3><p>⭐ 4.8</p></div>
+    </div>
+
+    <div style="display: flex; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 280px; background: white; padding: 20px; border-radius: 14px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+        <h3 style="text-align:center; margin-bottom:15px;">Distribuição de Vendas</h3>
+        <canvas id="graficoPizza"></canvas>
+      </div>
+
+      <div style="flex: 1; min-width: 280px; background: white; padding: 20px; border-radius: 14px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+        <h3 style="text-align:center; margin-bottom:15px;">Pedidos por Status</h3>
+        <canvas id="graficoStatus"></canvas>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Gráfico Pizza
+    const ctx = document.getElementById('graficoPizza');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Dorflex', 'Dipirona', 'Novalgina', 'Torsilax'],
+        datasets: [{
+          data: [35, 25, 20, 20]
+        }]
+      }
+    });
+
+    const ctx2 = document.getElementById('graficoStatus');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['Pendente', 'Em Preparo', 'Entregue'],
+        datasets: [{
+          data: [12, 8, 25]
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
